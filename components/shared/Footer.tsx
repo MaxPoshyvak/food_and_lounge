@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { m } from 'motion/react';
+import { m, Variants } from 'motion/react';
 
 // Чисті SVG-компоненти для соціальних мереж
 const InstagramIcon = ({ className }: { className?: string }) => (
@@ -35,7 +35,7 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 );
 
 export function Footer() {
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
@@ -43,7 +43,7 @@ export function Footer() {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
     };

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu as MenuIcon, X } from 'lucide-react';
 import Link from 'next/link';
-import { m, AnimatePresence } from 'motion/react';
+import { m, AnimatePresence, Variants } from 'motion/react';
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ export function Header() {
     }, [isMobileMenuOpen]);
 
     // Варіанти анімації для батьківського контейнера меню (Десктоп)
-    const navContainerVariants = {
+    const navContainerVariants: Variants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
@@ -32,7 +32,7 @@ export function Header() {
         },
     };
 
-    const navItemVariants = {
+    const navItemVariants: Variants = {
         hidden: { opacity: 0, y: -10 },
         show: {
             opacity: 1,
@@ -42,7 +42,7 @@ export function Header() {
     };
 
     // Варіанти анімації для повноекранного мобільного меню
-    const mobileMenuVariants = {
+    const mobileMenuVariants: Variants = {
         hidden: { opacity: 0, y: '-100%' },
         show: {
             opacity: 1,
@@ -56,7 +56,7 @@ export function Header() {
         },
     };
 
-    const mobileLinkVariants = {
+    const mobileLinkVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
     };

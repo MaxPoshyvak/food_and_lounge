@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Heart, ArrowRight } from 'lucide-react';
-import { m } from 'motion/react';
+import { m, Variants } from 'motion/react';
 
 const products = [
     {
@@ -42,13 +42,13 @@ const products = [
 
 export function PopularProducts() {
     // Анімація для заголовків
-    const headerVariants = {
+    const headerVariants: Variants = {
         hidden: { opacity: 0, y: 30 },
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
     };
 
     // Анімація для контейнера карток (каскадна поява)
-    const gridVariants = {
+    const gridVariants: Variants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
@@ -57,7 +57,7 @@ export function PopularProducts() {
     };
 
     // Анімація для кожної окремої картки
-    const cardVariants = {
+    const cardVariants: Variants = {
         hidden: { opacity: 0, y: 40 },
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
     };
@@ -116,7 +116,7 @@ export function PopularProducts() {
                             <div className="mt-6 flex items-center justify-between">
                                 <div className="flex flex-col">
                                     <span className="text-xs text-brown-800">Title:</span>
-                                    <span className="text-sm font-bold text-brown-900 truncate max-w-[140px]">
+                                    <span className="text-sm font-bold text-brown-900 truncate max-w-35">
                                         {product.title}
                                     </span>
                                 </div>
