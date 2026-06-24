@@ -1,7 +1,13 @@
+import { DiscoverSection, FeaturesSection, Footer, Hero, PopularProducts, SubscribeSection } from '@/components/shared';
+
 export default function Home() {
     return (
-        <div>
-            <h1>Food and Lounge</h1>
-        </div>
+        <>
+            <Hero />
+            <PopularProducts />
+            <DiscoverSection />
+            <FeaturesSection />
+            <SubscribeSection />
+        </>
     );
 }

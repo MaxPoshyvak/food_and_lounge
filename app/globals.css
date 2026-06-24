@@ -1,1 +1,19 @@
 @import 'tailwindcss';
+
+@theme {
+    --color-cream-50: #fffbf7;
+    --color-cream-100: #fdf5ec;
+    --color-cream-200: #f5e6d3;
+
+    --color-coffee-400: #d4a373;
+    --color-coffee-500: #bb8550;
+    --color-coffee-600: #a87c51;
+
+    --color-brown-800: #4a3525;
+    --color-brown-900: #2c1e16;
+
+    --color-soft-pink: #fef8f3;
+    --font-sans: var(--font-inter), sans-serif;
+    --font-serif: var(--font-playfair), serif;
+    --font-sansita: var(--font-sansita), sans-serif;
+}
